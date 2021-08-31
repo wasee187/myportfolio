@@ -1,0 +1,94 @@
+@import url('../../globalVar.css');
+
+.intro {
+  position: relative;
+}
+.intro-img {
+  box-shadow: var(--bs);
+}
+.section-subtitle-intro {
+  display: inline-block;
+}
+@media (min-width: 600px) {
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-template-areas:
+      'img title'
+      'img subtitle';
+    grid-column-gap: 2em;
+    grid-template-columns: min-content max-content;
+  }
+  .intro-img {
+    grid-area: img;
+    min-width: 300px;
+    min-height: 200px;
+    position: relative;
+    z-index: 2;
+  }
+  .section-subtitle-intro {
+    align-self: start;
+    grid-column: -1/1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+  }
+}
+.portfolio-item-individual {
+  padding: 0 2em 2em;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.portfolio-item-individual p {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--fs-h3);
+}
+.portfolio-item-individual p::first-letter {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 600;
+}
+.btn-deleteBTN {
+  margin: 2em 3em;
+  cursor: pointer;
+  border: none;
+  color: var(--clr-accent);
+  font-size: var(--fs-body);
+}
+.titleInput {
+  text-align: center;
+  margin: 10px;
+  font-family: 'Lora', serif;
+  font-size: 28px;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  color: gray;
+}
+.titleInput:focus {
+  outline: none;
+}
+.descriptionInput {
+  color: #666;
+  font-size: 18px;
+  line-height: 25px;
+  border: none;
+}
+.descriptionInput:focus {
+  outline: none;
+}
+.projectButton {
+  border: none;
+  background-color: var(--clr-accent);
+  padding: 5px;
+  width: 100px;
+  color: white;
+  cursor: pointer;
+  border-radius: 10px;
+  align-self: flex-end;
+  margin: 20px;
+}

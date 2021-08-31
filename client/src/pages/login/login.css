@@ -1,0 +1,49 @@
+@import url('../../globalVar.css');
+
+.login {
+  background-color: var(--clr-light);
+  background-image: url('./login.jpg');
+  background-size: cover;
+  background-blend-mode: multiply;
+  color: var(--clr-light);
+  text-align: center;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-title-login {
+  color: var(--clr-accent);
+  position: relative;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-h2);
+}
+.loginForm {
+  max-width: 1000px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.loginLabel {
+  margin: 10px 0px;
+  font-size: 18px;
+}
+.loginInput {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+}
+.loginButton {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: var(--clr-accent);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+.loginButton:disabled {
+  cursor: not-allowed;
+}

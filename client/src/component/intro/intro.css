@@ -1,0 +1,53 @@
+@import '../../globalVar.css';
+
+.intro {
+  position: relative;
+}
+.intro-img {
+  box-shadow: var(--bs);
+}
+
+.section-subtitle-intro {
+  display: inline-block;
+}
+
+.section-subtitle-intro,
+.section-title-intro {
+  animation: slide-right 2s linear;
+}
+@keyframes slide-right {
+  0% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+@media (min-width: 600px) {
+  .intro {
+    display: grid;
+    width: min-content;
+    margin: 0 auto;
+    grid-template-areas:
+      'img title'
+      'img subtitle';
+    grid-column-gap: 2em;
+    grid-template-columns: min-content max-content;
+  }
+  .intro-img {
+    grid-area: img;
+    min-width: 200px;
+    position: relative;
+    z-index: 2;
+  }
+  .section-subtitle-intro {
+    align-self: start;
+    grid-column: -1/1;
+    grid-row: 2;
+    text-align: right;
+    position: relative;
+    left: -1.5em;
+    width: calc(100% + 1.5em);
+  }
+}

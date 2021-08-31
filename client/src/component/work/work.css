@@ -1,0 +1,26 @@
+@import url('../../globalVar.css');
+.my-work {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.portfolio_item {
+  background: var(--clr-accent);
+  overflow: hidden;
+}
+.portfolio-img {
+  transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+}
+.portfolio_item:focus {
+  position: relative;
+  z-index: 2;
+}
+.portfolio-img:hover,
+.portfolio_item:focus .portfolio-img {
+  transform: scale(1.2);
+  opacity: 0.75;
+}

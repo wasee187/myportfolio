@@ -1,0 +1,51 @@
+@import url('../../globalVar.css');
+
+.achievement {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.achievement-img {
+  box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+  .achievement {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+      'title img'
+      'subtitle img'
+      'text img';
+    grid-column-gap: 2em;
+  }
+  .section-title-achievement {
+    grid-area: title;
+  }
+  .section-subtitle-achievement {
+    grid-column: 1/-1;
+    grid-row: 2;
+    position: relative;
+    left: -1em;
+    width: calc(100% + 2em);
+    padding-left: 2em;
+    padding-right: calc(200px + 4em);
+  }
+  .achievement-img {
+    grid-area: img;
+    position: relative;
+  }
+  .achievement-body {
+    grid-area: text;
+  }
+  .achievement-btn {
+    margin-top: 3rem;
+    text-align: center;
+    color: black;
+  }
+  .achievement-p1::first-letter,
+  .achievement-p2::first-letter {
+    margin-left: 20px;
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
